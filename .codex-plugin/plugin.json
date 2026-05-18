@@ -1,0 +1,38 @@
+{
+  "name": "codex-ai-lab-skills",
+  "version": "0.1.0",
+  "description": "Reusable public-facing agent skills for technical writing and design-thinking workflows.",
+  "author": {
+    "name": "Ira Oliver Fernando",
+    "url": "https://github.com/iocfinc"
+  },
+  "homepage": "https://github.com/iocfinc/codex-ai-lab-skills",
+  "repository": "https://github.com/iocfinc/codex-ai-lab-skills",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skills",
+    "agent-skills",
+    "writing",
+    "design-thinking"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Lab Skills",
+    "shortDescription": "Public agent skills for writing and product discovery.",
+    "longDescription": "A public AI Lab collection of reusable agent skills for clear technical writing and customer-centric design-thinking workflows.",
+    "developerName": "Ira Oliver Fernando",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "websiteURL": "https://github.com/iocfinc/codex-ai-lab-skills",
+    "privacyPolicyURL": "https://github.com/iocfinc/codex-ai-lab-skills/blob/main/README.md",
+    "termsOfServiceURL": "https://github.com/iocfinc/codex-ai-lab-skills/blob/main/LICENSE",
+    "defaultPrompt": [
+      "Rewrite this technical note so it sounds concrete and useful.",
+      "Run a design-thinking simulation for this product idea."
+    ],
+    "brandColor": "#0F766E"
+  }
+}
