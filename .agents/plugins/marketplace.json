@@ -1,0 +1,20 @@
+{
+  "name": "codex-ai-lab-skills",
+  "interface": {
+    "displayName": "AI Lab Skills"
+  },
+  "plugins": [
+    {
+      "name": "codex-ai-lab-skills",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
