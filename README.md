@@ -20,6 +20,7 @@ skills install github.com/iocfinc/ai-lab-skills/SKILLS/anti-slop-editorial
 skills install github.com/iocfinc/ai-lab-skills/SKILLS/repo-onboarding
 skills install github.com/iocfinc/ai-lab-skills/SKILLS/prompt-hardening
 skills install github.com/iocfinc/ai-lab-skills/SKILLS/evidence-synthesis
+skills install github.com/iocfinc/ai-lab-skills/SKILLS/editorial-charting
 ```
 
 Install the repo through other `SKILL.md`-compatible marketplaces by targeting the same `SKILLS/<skill-name>` path.
@@ -36,8 +37,13 @@ Install the repo through other `SKILL.md`-compatible marketplaces by targeting t
 
 ### Research And Framing
 
+- `editorial-charting`  
+  Create editorial charts with story-led framing, disciplined color, annotation, source treatment, implementation-ready examples, and a printable contact sheet.
+
+  ![Editorial Charting contact sheet preview](SKILLS/editorial-charting/assets/contact-sheet-preview.png)
+
 - `economist-chart-editor`  
-  Apply Economist-style editorial discipline to chart framing, typography, annotation, and implementation detail.
+  Legacy alias for `editorial-charting`, kept for older install paths.
 
 - `evidence-synthesis`  
   Build a source-backed evidence matrix and keep facts separate from inference.

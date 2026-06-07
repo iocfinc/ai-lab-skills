@@ -66,9 +66,12 @@ $XDG_DATA_HOME/dioscuri/ai-lab-skills
 
 - `anti-slop-editorial`
 - `instant-influence`
+- `editorial-charting`
 - `economist-chart-editor`
 - `repo-onboarding`
 - `prompt-hardening`
 - `evidence-synthesis`
 - `python-env-bootstrap`
 - `codex-project-planner`
+
+`economist-chart-editor` is a legacy alias. New charting work should target `editorial-charting`.

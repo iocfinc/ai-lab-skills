@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editorial Charting Contact Sheet</title>
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #6B7280;
+      --line: #CBD5E1;
+      --grid: #E5E7EB;
+      --panel: #F8FAFC;
+      --blue: #0B5FFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: white;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.25;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 24px; }
+    header {
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+    .mark {
+      background: var(--ink);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      font-weight: 800;
+    }
+    h1 { margin: 14px 0 6px; font-size: 30px; letter-spacing: 0; }
+    .subhead { margin: 0 18px 14px 0; color: var(--muted); max-width: 760px; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+    .step {
+      border: 1px solid var(--line);
+      padding: 9px;
+      min-height: 62px;
+    }
+    .step b { display: block; font-size: 13px; margin-bottom: 5px; }
+    .step span { color: var(--muted); font-size: 12px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    article {
+      border: 1px solid var(--line);
+      min-height: 312px;
+      display: flex;
+      flex-direction: column;
+      break-inside: avoid;
+    }
+    .card-head {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      border-bottom: 1px solid var(--line);
+      min-height: 52px;
+    }
+    .num {
+      background: var(--ink);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+    h2 { font-size: 16px; margin: 8px 10px 2px; }
+    .question { margin: 0 10px 8px; color: var(--blue); font-size: 12px; font-weight: 700; }
+    .chart { padding: 9px 10px 6px; border-bottom: 1px solid var(--line); background: var(--panel); }
+    .chart-claim { display: block; margin: 0 0 4px; font-size: 11px; font-weight: 700; color: var(--ink); }
+    svg { width: 100%; height: auto; display: block; }
+    .tiny { font-size: 9px; fill: var(--muted); font-family: Arial, Helvetica, sans-serif; }
+    .strong { fill: var(--ink); font-weight: 700; }
+    .invert { fill: white; font-weight: 700; }
+    .gridline { stroke: var(--grid); stroke-width: 1; }
+    .axis { stroke: #9CA3AF; stroke-width: 1; }
+    .callout { stroke: #334155; stroke-width: 1.5; fill: none; }
+    .arrow { marker-end: url(#arrow); }
+    .trendline { stroke: #94A3B8; stroke-width: 1.4; fill: none; stroke-dasharray: 3 3; }
+    dl { margin: 0; padding: 9px 11px 11px; display: grid; gap: 6px; }
+    dt { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    dd { margin: 2px 0 0; font-size: 12px; }
+    footer {
+      margin-top: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    @page { size: A4 landscape; margin: 12mm; }
+    @media print {
+      main { max-width: none; padding: 0; }
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      header { margin-bottom: 10px; }
+      h1 { font-size: 24px; margin-top: 10px; }
+      .subhead { font-size: 12px; margin-bottom: 10px; }
+      .steps { gap: 6px; margin-bottom: 10px; }
+      .step { min-height: 48px; padding: 6px 8px; }
+      .step span { font-size: 10px; }
+      .grid { gap: 8px; }
+      article { min-height: 238px; }
+      .chart { padding: 6px 8px 4px; }
+      dl { gap: 4px; padding: 7px 9px 8px; }
+      dt { font-size: 8px; }
+      dd { font-size: 10px; }
+      footer { font-size: 9px; margin-top: 8px; padding-top: 6px; }
+    }
+    @media (max-width: 860px) {
+      main { padding: 18px; }
+      header { grid-template-columns: 72px 1fr; }
+      .steps, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="mark">EC</div>
+    <div>
+      <h1>Editorial Charting Contact Sheet</h1>
+      <p class="subhead">A quick visual inventory for humans and agents. Pick the reader question, load the matching pattern, then build with the color tokens and sample scripts.</p>
+    </div>
+  </header>
+  <section class="steps" aria-label="Quick start">
+    <div class="step"><b>1. Pick the question</b><span>Comparison, trend, distribution, composition, relationship, or callout.</span></div>
+    <div class="step"><b>2. Load the pattern</b><span>Use <code>references/chart-patterns.yaml</code>.</span></div>
+    <div class="step"><b>3. Choose emphasis</b><span>Use one hue plus shades; categorical tokens only for stable groups.</span></div>
+    <div class="step"><b>4. Build or brief</b><span>Use the Python samples or return the skill output contract.</span></div>
+  </section>
+  <section class="grid" aria-label="Chart capabilities">
+    <article>
+      <div class="card-head">
+        <div class="num">01</div>
+        <div>
+          <h2>Ranked Comparison</h2>
+          <p class="question">Which category leads?</p>
+        </div>
+      </div>
+      <div class="chart"><span class="chart-claim">Virginica leads on length</span><svg viewBox="0 0 240 128" role="img" aria-label="Horizontal bar chart"><text x="8" y="30" class="tiny">setosa</text><rect x="70" y="18" width="103.0" height="16" fill="#CEDFFF"/><text x="222" y="30" text-anchor="end" class="tiny strong">5</text><text x="8" y="61" class="tiny">versicolor</text><rect x="70" y="49" width="121.6" height="16" fill="#79A7FF"/><text x="222" y="61" text-anchor="end" class="tiny strong">5.9</text><text x="8" y="92" class="tiny">virginica</text><rect x="70" y="80" width="136.0" height="16" fill="#0B5FFF"/><text x="222" y="92" text-anchor="end" class="tiny strong">6.6</text></svg></div>
+      <dl>
+        <div><dt>Use when</dt><dd>Use for peer benchmarks, sorted categories, and single-winner comparisons.</dd></div>
+        <div><dt>Sample data</dt><dd>Iris-like mean sepal length by species.</dd></div>
+        <div><dt>Next file</dt><dd><code>references/chart-patterns.yaml#comparison_ranked</code></dd></div>
+      </dl>
+    </article>
+    <article>
+      <div class="card-head">
+        <div class="num">02</div>
+        <div>
+          <h2>Trend</h2>
+          <p class="question">What changed over time?</p>
+        </div>
+      </div>
+      <div class="chart"><span class="chart-claim">Momentum accelerates late</span><svg viewBox="0 0 240 128" role="img" aria-label="Line chart"><line x1="12" x2="226" y1="28" y2="28" class="gridline"/><line x1="12" x2="226" y1="56" y2="56" class="gridline"/><line x1="12" x2="226" y1="84" y2="84" class="gridline"/><line x1="12" x2="226" y1="112" y2="112" class="gridline"/><polyline points="14.0,106.0 44.0,96.1 74.0,98.5 104.0,78.7 134.0,63.8 164.0,56.3 194.0,36.4 224.0,24.0" fill="none" stroke="#0B5FFF" stroke-width="4"/><circle cx="224.0" cy="24.0" r="4" fill="#0B5FFF"/><text x="220.0" y="16.0" text-anchor="end" class="tiny strong">64</text></svg></div>
+      <dl>
+        <div><dt>Use when</dt><dd>Use for direction, pace, inflection points, or forecast context.</dd></div>
+        <div><dt>Sample data</dt><dd>Toy quarterly metric series.</dd></div>
+        <div><dt>Next file</dt><dd><code>references/chart-patterns.yaml#trend</code></dd></div>
+      </dl>
+    </article>
+    <article>
+      <div class="card-head">
+        <div class="num">03</div>
+        <div>
+          <h2>Distribution</h2>
+          <p class="question">How spread out are values?</p>
+        </div>
+      </div>
+      <div class="chart"><span class="chart-claim">Most values cluster long</span><svg viewBox="0 0 240 128" role="img" aria-label="Histogram"><line x1="12" x2="226" y1="106" y2="106" class="axis"/><rect x="18" y="84.3" width="22" height="21.7" fill="#CEDFFF"/><rect x="47" y="57.2" width="22" height="48.8" fill="#CEDFFF"/><rect x="76" y="46.4" width="22" height="59.6" fill="#CEDFFF"/><rect x="105" y="68.1" width="22" height="37.9" fill="#CEDFFF"/><rect x="134" y="32.8" width="22" height="73.2" fill="#CEDFFF"/><rect x="163" y="22.0" width="22" height="84.0" fill="#0B5FFF"/><rect x="192" y="51.8" width="22" height="54.2" fill="#CEDFFF"/><line x1="116" x2="116" y1="25" y2="106" class="callout"/><text x="122" y="34" class="tiny strong">typical</text><text x="18" y="120" class="tiny">short</text><text x="104" y="120" text-anchor="middle" class="tiny">median</text><text x="214" y="120" text-anchor="end" class="tiny">long</text></svg></div>
+      <dl>
+        <div><dt>Use when</dt><dd>Use for skew, outliers, ranges, and typical values.</dd></div>
+        <div><dt>Sample data</dt><dd>Iris-like petal length bins.</dd></div>
+        <div><dt>Next file</dt><dd><code>references/chart-patterns.yaml#distribution</code></dd></div>
+      </dl>
+    </article>
+    <article>
+      <div class="card-head">
+        <div class="num">04</div>
+        <div>
+          <h2>Composition</h2>
+          <p class="question">What makes up the whole?</p>
+        </div>
+      </div>
+      <div class="chart"><span class="chart-claim">Low digits are the largest group</span><svg viewBox="0 0 240 128" role="img" aria-label="Stacked bar chart"><rect x="18.0" y="44" width="78.5" height="32" fill="#00AEEF"/><rect x="96.5" y="44" width="59.3" height="32" fill="#FF6B00"/><rect x="155.9" y="44" width="58.1" height="32" fill="#7B61FF"/><text x="57.3" y="64" text-anchor="middle" class="tiny invert">0-3 40%</text><text x="126.2" y="64" text-anchor="middle" class="tiny invert">4-6 30%</text><text x="184.9" y="64" text-anchor="middle" class="tiny invert">7-9 30%</text><text x="18" y="96" class="tiny">0%</text><text x="214" y="96" text-anchor="end" class="tiny">100%</text></svg></div>
+      <dl>
+        <div><dt>Use when</dt><dd>Use for stable parts-of-whole with a small number of groups.</dd></div>
+        <div><dt>Sample data</dt><dd>Digits-like classes grouped into low, middle, and high digits.</dd></div>
+        <div><dt>Next file</dt><dd><code>references/chart-patterns.yaml#composition</code></dd></div>
+      </dl>
+    </article>
+    <article>
+      <div class="card-head">
+        <div class="num">05</div>
+        <div>
+          <h2>Relationship</h2>
+          <p class="question">Do two measures move together?</p>
+        </div>
+      </div>
+      <div class="chart"><span class="chart-claim">Bigger sepals track bigger petals</span><svg viewBox="0 0 240 128" role="img" aria-label="Scatterplot"><line x1="18" x2="222" y1="108" y2="108" class="axis"/><line x1="18" x2="18" y1="18" y2="108" class="axis"/><path d="M32 94 C78 78, 118 53, 208 26" class="trendline"/><circle cx="26.0" cy="104.0" r="3" fill="#D1D5DB"/><circle cx="41.7" cy="102.2" r="3" fill="#D1D5DB"/><circle cx="53.4" cy="88.2" r="3" fill="#D1D5DB"/><circle cx="84.8" cy="60.2" r="4.5" fill="#E20074"/><circle cx="108.3" cy="65.5" r="3" fill="#D1D5DB"/><circle cx="120.0" cy="51.5" r="3" fill="#D1D5DB"/><circle cx="151.3" cy="44.5" r="3" fill="#D1D5DB"/><circle cx="174.8" cy="35.8" r="3" fill="#D1D5DB"/><circle cx="194.4" cy="20.0" r="4.5" fill="#E20074"/><circle cx="214.0" cy="27.0" r="3" fill="#D1D5DB"/></svg></div>
+      <dl>
+        <div><dt>Use when</dt><dd>Use for association, clusters, and outliers.</dd></div>
+        <div><dt>Sample data</dt><dd>Iris-like sepal and petal measurements.</dd></div>
+        <div><dt>Next file</dt><dd><code>references/chart-patterns.yaml#relationship</code></dd></div>
+      </dl>
+    </article>
+    <article>
+      <div class="card-head">
+        <div class="num">06</div>
+        <div>
+          <h2>Annotation Story</h2>
+          <p class="question">What is the one point to notice?</p>
+        </div>
+      </div>
+      <div class="chart"><span class="chart-claim">Reuse is where work compounds</span><svg viewBox="0 0 240 128" role="img" aria-label="Annotated bar chart"><line x1="14" x2="222" y1="104" y2="104" class="axis"/><rect x="20" y="84.2" width="24" height="19.8" fill="#CEDFFF"/><rect x="59" y="74.3" width="24" height="29.7" fill="#CEDFFF"/><rect x="98" y="57.9" width="24" height="46.1" fill="#79A7FF"/><rect x="137" y="43.6" width="24" height="60.4" fill="#3077FF"/><rect x="176" y="26.0" width="24" height="78.0" fill="#0B5FFF"/><defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#334155"/></marker></defs><text x="126" y="22" class="tiny strong">Peak reuse</text><path d="M170 25 L188 30" class="callout arrow"/></svg></div>
+      <dl>
+        <div><dt>Use when</dt><dd>Use for a callout attached to a threshold, moment, or selected value.</dd></div>
+        <div><dt>Sample data</dt><dd>Toy workflow metric with highlighted reuse step.</dd></div>
+        <div><dt>Next file</dt><dd><code>references/chart-patterns.yaml#annotation_story</code></dd></div>
+      </dl>
+    </article>
+  </section>
+  <footer>
+    Demo data: tiny toy-dataset-style values inspired by scikit-learn bundled datasets and Matplotlib gallery chart forms. This palette is Bloomberg-inspired, not an official Bloomberg style guide.
+  </footer>
+</main>
+</body>
+</html>
