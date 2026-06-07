@@ -1,85 +1,54 @@
 # AI Lab Skills
 
-Public distribution repo for a curated set of installable `SKILL.md` skills focused on AI work quality, product thinking, and practical developer workflows.
+`codex-ai-lab-skills` is a public skills repository for reusable agent workflows that are concise, auditable, and easy to install from GitHub-based skill loaders.
 
-This repository is intentionally thin:
+The first release focuses on:
 
-- published skills live under `SKILLS/`
-- canonical authoring stays in `CodexSkills`
-- reusable export logic stays out of this repo
-- checked-in files stay limited to curated skill content and docs
+- `clear-technical-writing`: rewrite technical and product writing so it sounds concrete, useful, and close to the work
+- `design-thinking-simulation`: run a customer-centric design-thinking exercise from opportunity framing through value propositions and story
 
-The product posture is deliberate: this is not a dump of every internal skill. It is a public-facing shortlist that should be useful on its own and legible as a portfolio of how we design AI-native workflows.
+## Repository Layout
 
-## Install
+- `skills/`: public skill folders
+- `.codex-plugin/plugin.json`: Codex plugin manifest for local marketplace-style install
+- `.agents/plugins/marketplace.json`: local marketplace entrypoint
+- `scripts/validate.sh`: structural validation
 
-Install a single skill with `skills.sh`:
+## Install In Codex
+
+From a Codex session after cloning this repo locally:
 
 ```bash
-skills install github.com/iocfinc/ai-lab-skills/SKILLS/anti-slop-editorial
-skills install github.com/iocfinc/ai-lab-skills/SKILLS/repo-onboarding
-skills install github.com/iocfinc/ai-lab-skills/SKILLS/prompt-hardening
-skills install github.com/iocfinc/ai-lab-skills/SKILLS/evidence-synthesis
-skills install github.com/iocfinc/ai-lab-skills/SKILLS/editorial-charting
+codex plugin marketplace add ./codex-ai-lab-skills
 ```
 
-Install the repo through other `SKILL.md`-compatible marketplaces by targeting the same `SKILLS/<skill-name>` path.
+Then install **AI Lab Skills** from the local marketplace.
 
-## Skill Inventory
+## GitHub Skill Loaders
 
-### Writing And Communication
+This repo is also structured for GitHub-based skill installers that expect standalone skill folders under `skills/<skill-name>/SKILL.md`.
 
-- `anti-slop-editorial`  
-  Rewrite technical, AI, or product writing so it sounds concrete, useful, and close to the real work.
+Current public skill slugs:
 
-- `instant-influence`  
-  Facilitate one-question-at-a-time when someone is stuck in a conversation, draft, or decision.
+- `clear-technical-writing`
+- `design-thinking-simulation`
 
-### Research And Framing
+## Skill Notes
 
-- `editorial-charting`  
-  Create editorial charts with story-led framing, disciplined color, annotation, source treatment, implementation-ready examples, and a printable contact sheet.
+### `clear-technical-writing`
 
-  ![Editorial Charting contact sheet preview](SKILLS/editorial-charting/assets/contact-sheet-preview.png)
+Derived from an internal anti-slop editorial draft and refined into a public-safe writing skill. It is aimed at technical blogs, product notes, engineering updates, internal docs, and similar writing that should sound like it came from a practitioner rather than generic AI copy.
 
-- `economist-chart-editor`  
-  Legacy alias for `editorial-charting`, kept for older install paths.
+### `design-thinking-simulation`
 
-- `evidence-synthesis`  
-  Build a source-backed evidence matrix and keep facts separate from inference.
+Derived from a design-thinking simulation brief and packaged as a reusable facilitation skill. It produces structured customer scenarios, empathy maps, insight clusters, HMW prompts, value propositions, and a customer story.
 
-### Engineering Workflow
+## Publishing Notes
 
-- `repo-onboarding`  
-  Rapidly map an unfamiliar repository before changing code.
+- Keep public skill names neutral and discoverable.
+- Add repository topics such as `codex`, `skills`, `agent-skills`, `writing`, and `design-thinking` after pushing to GitHub.
+- If you later register this repo with an external skills marketplace, keep the skill slugs stable.
 
-- `prompt-hardening`  
-  Rewrite vague task briefs and operating instructions into tighter execution inputs.
+## License
 
-- `python-env-bootstrap`  
-  Standardize Python repo setup with a `pyproject.toml`-first workflow and `.venv` fallback.
-
-- `codex-project-planner`  
-  Turn a fuzzy product or feature idea into a Codex-ready project skeleton and execution checklist.
-
-## Curation Notes
-
-The canonical inventory in `CodexSkills` is much larger than the public surface here. Skills were selected for:
-
-- stand-alone usefulness
-- low private-context dependency
-- broad applicability outside one repo or workflow
-- strength as portfolio-quality product artifacts
-
-See [docs/2026-05-29-skill-audit.md](docs/2026-05-29-skill-audit.md) for the current shortlist and deferred candidates.
-
-## Publishing Model
-
-This repo is the public distro surface, not the authoring workspace. The expected workflow is:
-
-1. draft or refine the skill in `CodexSkills`
-2. export the curated public copy into `SKILLS/`
-3. validate the public tree
-4. publish from this repo
-
-See [docs/public-packaging.md](docs/public-packaging.md) for the authoring and packaging contract.
+MIT
