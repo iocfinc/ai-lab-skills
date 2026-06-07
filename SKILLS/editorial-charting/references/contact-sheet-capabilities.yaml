@@ -1,0 +1,68 @@
+version: 1
+name: editorial-charting-contact-sheet-capabilities
+intent: >
+  A compact catalogue of chart patterns shown in the contact sheet. The sample
+  data uses small, public toy-dataset-style examples inspired by scikit-learn
+  datasets and Matplotlib gallery chart forms.
+
+demo_sources:
+  sklearn_toy_datasets:
+    url: "https://scikit-learn.org/stable/datasets/toy_dataset.html"
+    note: "Small bundled datasets such as iris, digits, diabetes, wine, and breast cancer; no external download required."
+  matplotlib_gallery:
+    url: "https://matplotlib.org/stable/gallery/index.html"
+    note: "Reference gallery for common chart forms such as bars, lines, scatterplots, histograms, and annotations."
+
+design_inspiration:
+  bambu_quickstart:
+    url: "https://cdn1.bambulab.com/documentation/quick-start-f507128172bdf/Quick%20start%20guide%20-%20A1-EN.pdf"
+    note: "Inspiration for a visual-first quick-start layout, not a copied design."
+
+contact_sheet_cards:
+  - id: comparison_ranked
+    chart_type: "Horizontal bar"
+    claim: "Virginica leads on length."
+    question: "Which category leads?"
+    sample_data: "Iris-like mean sepal length by species."
+    use_when: "You need a ranked comparison or a peer benchmark."
+    implementation_reference: "references/chart-patterns.yaml#comparison_ranked"
+
+  - id: trend
+    chart_type: "Line"
+    claim: "Momentum accelerates late."
+    question: "What changed over time?"
+    sample_data: "Toy quarterly metric series."
+    use_when: "You need to show direction, pace, inflection, or forecast context."
+    implementation_reference: "references/chart-patterns.yaml#trend"
+
+  - id: distribution
+    chart_type: "Histogram"
+    claim: "Most values cluster long."
+    question: "How spread out are values?"
+    sample_data: "Iris-like petal length bins."
+    use_when: "You need skew, range, outliers, or typical values."
+    implementation_reference: "references/chart-patterns.yaml#distribution"
+
+  - id: composition
+    chart_type: "Stacked bar"
+    claim: "Low digits are the largest group."
+    question: "What makes up the whole?"
+    sample_data: "Digits-like class counts grouped into low, middle, and high digits."
+    use_when: "You need shares with a small, stable number of parts."
+    implementation_reference: "references/chart-patterns.yaml#composition"
+
+  - id: relationship
+    chart_type: "Scatterplot"
+    claim: "Bigger sepals track bigger petals."
+    question: "Do two measures move together?"
+    sample_data: "Iris-like sepal and petal measurements."
+    use_when: "You need association, clusters, or outliers."
+    implementation_reference: "references/chart-patterns.yaml#relationship"
+
+  - id: annotation_story
+    chart_type: "Annotated bar"
+    claim: "Reuse is where work compounds."
+    question: "What is the one point to notice?"
+    sample_data: "Toy workflow metric with a highlighted reuse step."
+    use_when: "You need a callout attached to a specific point or threshold."
+    implementation_reference: "references/chart-patterns.yaml#annotation_story"

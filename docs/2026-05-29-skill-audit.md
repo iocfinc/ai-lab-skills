@@ -37,7 +37,7 @@ Each candidate was evaluated against five questions:
 | --- | --- |
 | `anti-slop-editorial` | Clear writing utility and differentiated editorial taste |
 | `instant-influence` | Distinct facilitation mode with real user utility |
-| `economist-chart-editor` | Sharp editorial visualization niche |
+| `editorial-charting` | Sharp editorial visualization niche, refreshed from the legacy `economist-chart-editor` path |
 
 ## Deferred For Later Packaging
 

@@ -1,0 +1,182 @@
+version: 1
+name: editorial-charting-color-system
+intent: >
+  A high-contrast, Bloomberg-inspired data visualization color system for
+  editorial charts. This is an internal inspired palette, not an official
+  Bloomberg style guide.
+
+base_palette:
+  blue: "#0B5FFF"
+  cyan: "#00AEEF"
+  green: "#00A66A"
+  yellow: "#F8C300"
+  orange: "#FF6B00"
+  red: "#E23D3D"
+  magenta: "#E20074"
+  violet: "#7B61FF"
+  slate: "#334155"
+
+neutral_grays:
+  ink: "#111827"
+  text: "#1F2937"
+  muted_text: "#6B7280"
+  grid: "#E5E7EB"
+  axis: "#9CA3AF"
+  background: "#FFFFFF"
+  panel: "#F8FAFC"
+  missing_data: "#D1D5DB"
+
+default_roles:
+  main_claim: "shade_ramps.blue.1.0"
+  secondary_emphasis: "shade_ramps.blue.0.85"
+  comparison: "shade_ramps.blue.0.55"
+  context: "shade_ramps.blue.0.2"
+  muted_series: "neutral_grays.missing_data"
+  gridline: "neutral_grays.grid"
+  text: "neutral_grays.text"
+
+shade_usage:
+  "0.1": "Very light background bands or map bins; avoid for small marks."
+  "0.2": "Muted context series, history, non-focus bars, and reference ranges."
+  "0.3": "Low-emphasis comparison when labels carry the exact value."
+  "0.4": "Secondary background comparison."
+  "0.5": "Middle value in ordered bins."
+  "0.55": "Default comparison emphasis."
+  "0.6": "Readable supporting mark for medium-size bars or areas."
+  "0.7": "Strong supporting mark."
+  "0.8": "High emphasis, but not the primary claim."
+  "0.85": "Default secondary emphasis."
+  "0.9": "Near-primary emphasis."
+  "1.0": "Primary claim, highlight, or selected series."
+
+shade_ramps:
+  blue:
+    "0.1": "#E7EFFF"
+    "0.2": "#CEDFFF"
+    "0.3": "#B6CFFF"
+    "0.4": "#9DBFFF"
+    "0.5": "#85AFFF"
+    "0.55": "#79A7FF"
+    "0.6": "#6D9FFF"
+    "0.7": "#548FFF"
+    "0.8": "#3C7FFF"
+    "0.85": "#3077FF"
+    "0.9": "#236FFF"
+    "1.0": "#0B5FFF"
+  cyan:
+    "0.1": "#E6F7FD"
+    "0.2": "#CCEFFC"
+    "0.3": "#B2E7FA"
+    "0.4": "#99DFF9"
+    "0.5": "#80D6F7"
+    "0.55": "#73D2F6"
+    "0.6": "#66CEF5"
+    "0.7": "#4DC6F4"
+    "0.8": "#33BEF2"
+    "0.85": "#26BAF1"
+    "0.9": "#19B6F1"
+    "1.0": "#00AEEF"
+  green:
+    "0.1": "#E6F6F0"
+    "0.2": "#CCEDE1"
+    "0.3": "#B2E4D2"
+    "0.4": "#99DBC3"
+    "0.5": "#80D2B4"
+    "0.55": "#73CEAD"
+    "0.6": "#66CAA6"
+    "0.7": "#4DC197"
+    "0.8": "#33B888"
+    "0.85": "#26B380"
+    "0.9": "#19AF79"
+    "1.0": "#00A66A"
+  yellow:
+    "0.1": "#FEF9E6"
+    "0.2": "#FEF3CC"
+    "0.3": "#FDEDB2"
+    "0.4": "#FCE799"
+    "0.5": "#FCE180"
+    "0.55": "#FBDE73"
+    "0.6": "#FBDB66"
+    "0.7": "#FAD54D"
+    "0.8": "#F9CF33"
+    "0.85": "#F9CC26"
+    "0.9": "#F9C919"
+    "1.0": "#F8C300"
+  orange:
+    "0.1": "#FFF0E6"
+    "0.2": "#FFE1CC"
+    "0.3": "#FFD3B2"
+    "0.4": "#FFC499"
+    "0.5": "#FFB580"
+    "0.55": "#FFAE73"
+    "0.6": "#FFA666"
+    "0.7": "#FF974D"
+    "0.8": "#FF8933"
+    "0.85": "#FF8126"
+    "0.9": "#FF7A19"
+    "1.0": "#FF6B00"
+  red:
+    "0.1": "#FCECEC"
+    "0.2": "#F9D8D8"
+    "0.3": "#F6C5C5"
+    "0.4": "#F3B1B1"
+    "0.5": "#F09E9E"
+    "0.55": "#EF9494"
+    "0.6": "#EE8B8B"
+    "0.7": "#EB7777"
+    "0.8": "#E86464"
+    "0.85": "#E65A5A"
+    "0.9": "#E55050"
+    "1.0": "#E23D3D"
+  magenta:
+    "0.1": "#FCE6F1"
+    "0.2": "#F9CCE3"
+    "0.3": "#F6B2D5"
+    "0.4": "#F399C7"
+    "0.5": "#F080BA"
+    "0.55": "#EF73B3"
+    "0.6": "#EE66AC"
+    "0.7": "#EB4D9E"
+    "0.8": "#E83390"
+    "0.85": "#E62689"
+    "0.9": "#E51982"
+    "1.0": "#E20074"
+  violet:
+    "0.1": "#F2EFFF"
+    "0.2": "#E5DFFF"
+    "0.3": "#D7D0FF"
+    "0.4": "#CAC0FF"
+    "0.5": "#BDB0FF"
+    "0.55": "#B6A8FF"
+    "0.6": "#B0A0FF"
+    "0.7": "#A390FF"
+    "0.8": "#9581FF"
+    "0.85": "#8F79FF"
+    "0.9": "#8871FF"
+    "1.0": "#7B61FF"
+  slate:
+    "0.1": "#EBECEE"
+    "0.2": "#D6D9DD"
+    "0.3": "#C2C6CC"
+    "0.4": "#ADB3BB"
+    "0.5": "#99A0AA"
+    "0.55": "#8F96A2"
+    "0.6": "#858D99"
+    "0.7": "#707A88"
+    "0.8": "#5C6777"
+    "0.85": "#525E6E"
+    "0.9": "#475466"
+    "1.0": "#334155"
+
+categorical_order:
+  default: [blue, orange, green, magenta, cyan, red, violet, yellow, slate]
+  caution: >
+    Use categorical colors only when categories are truly unordered. For
+    emphasis charts, prefer one hue plus shades.
+
+rules:
+  - Use one hue plus shades when the chart has a single editorial focus.
+  - Use neutral grays for non-data furniture: axes, gridlines, notes, and sources.
+  - Avoid rainbow palettes for ordered values; use shade ramps or a tested gradient.
+  - Check colorblind legibility when hue alone carries meaning.
+  - Do not encode positive and negative with red and green unless the audience expects it.

@@ -1,0 +1,58 @@
+version: 1
+name: editorial-charting-patterns
+
+patterns:
+  comparison_ranked:
+    best_for: "Ranking categories or showing one value against peers."
+    default_chart: "Horizontal bar chart."
+    encoding: "Category on y-axis, value on x-axis, sorted by value unless chronology matters."
+    labeling: "Direct-label values at bar ends; avoid legends."
+    color: "Context bars at shade 0.2; main claim at shade 1.0."
+    avoid: "Alphabetical order, vertical labels, 3D bars, unexplained truncation."
+
+  trend:
+    best_for: "Change over time, inflection points, forecasts, or regime shifts."
+    default_chart: "Line chart."
+    encoding: "Time on x-axis, value on y-axis, consistent intervals."
+    labeling: "Direct-label line ends when series count is small."
+    color: "Main series at shade 1.0; comparison series at gray or shade 0.55."
+    avoid: "Too many lines, irregular time gaps without disclosure, dual axes."
+
+  distribution:
+    best_for: "Spread, skew, outliers, and typical values."
+    default_chart: "Histogram, dot plot, box plot, or violin plot depending on audience."
+    encoding: "Bins or observations on x-axis, count or density on y-axis."
+    labeling: "Annotate median, threshold, or outlier only when it supports the claim."
+    color: "Use one hue; reserve shade 1.0 for the region or point that matters."
+    avoid: "Decorative gradients, unexplained bin widths, overprecise labels."
+
+  composition:
+    best_for: "Parts of a whole when the number of parts is small and stable."
+    default_chart: "Stacked bar for shares; small multiples for composition over time."
+    encoding: "Use common baselines where comparison matters."
+    labeling: "Label large segments directly; group small segments when needed."
+    color: "Use categorical colors for stable named categories; use shade ramps for ordered parts."
+    avoid: "Pie charts with many slices, stacked areas with noisy category order."
+
+  relationship:
+    best_for: "Association between two measures, clusters, and outliers."
+    default_chart: "Scatterplot."
+    encoding: "One numeric measure per axis; optional size or color only when it adds meaning."
+    labeling: "Label selected outliers or focus points, not every point."
+    color: "Use gray for the field; accent selected points."
+    avoid: "Overplotting without transparency, trendline without method note."
+
+  annotation_story:
+    best_for: "A chart where a specific moment, threshold, or comparison is the story."
+    default_chart: "Use the underlying chart type, then layer callouts."
+    encoding: "Make annotations local to the relevant data mark."
+    labeling: "Short callout near the evidence; put method detail in notes."
+    color: "Use shade 1.0 only where the annotation points."
+    avoid: "Long prose blocks, arrows that cross the plot, callouts that restate the title."
+
+quality_checks:
+  - "Does the title state the takeaway rather than just the topic?"
+  - "Can the reader find the main comparison in three seconds?"
+  - "Would the chart still work in grayscale or with labels?"
+  - "Are units, time coverage, and source visible?"
+  - "Is every axis, gridline, label, and annotation earning its space?"

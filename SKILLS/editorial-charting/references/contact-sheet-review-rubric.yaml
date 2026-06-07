@@ -1,0 +1,40 @@
+version: 1
+name: editorial-charting-contact-sheet-review-rubric
+intent: >
+  Review checklist for contact sheet refinements. Use after adding or changing
+  chart cards, miniature SVGs, source notes, or print layout rules.
+
+review_roles:
+  proofreader:
+    focus:
+      - "No overclaiming: distinguish specify, prototype, brief, and render."
+      - "Source notes are categorized correctly as data source, chart-form reference, or design inspiration."
+      - "Setup instructions match the actual generator behavior."
+      - "Chart references use exact paths and anchors, such as references/chart-patterns.yaml#trend."
+      - "Quick-start copy does not contradict chart examples, especially one-hue emphasis versus categorical composition."
+    required_output:
+      - "File path"
+      - "Issue"
+      - "Suggested replacement wording or config change"
+
+  visual_creative_director:
+    focus:
+      - "No marks clip or crowd the SVG viewport."
+      - "Value labels have gutters and remain readable at contact-sheet scale."
+      - "Miniatures model editorial claims, not only chart taxonomy."
+      - "Callouts point to evidence and use concrete micro-claims."
+      - "Print CSS keeps the sheet compact and avoids accidental multi-page spill."
+      - "Borders, panels, and typography feel like a polished quick-start sheet, not a wireframe."
+    required_output:
+      - "File path"
+      - "Issue"
+      - "Specific generator, SVG, CSS, or config change"
+
+acceptance_checks:
+  - "Generated HTML has six article cards, six inline SVGs, and six chart-claim labels."
+  - "No generated SVG point uses cy=\"0.0\"."
+  - "No generated value label lands at x=\"229.0\" or similar right-edge crowding."
+  - "Contact sheet copy uses exact references/chart-patterns.yaml#... anchors."
+  - "Quick-start copy allows categorical colors for stable unordered groups."
+  - "PNG preview exists for code-host visibility and reflects the current chart card set."
+  - "Public and canonical CodexSkills copies match after sync."
