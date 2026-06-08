@@ -2,10 +2,11 @@
 
 `codex-ai-lab-skills` is a public skills repository for reusable agent workflows that are concise, auditable, and easy to install from GitHub-based skill loaders.
 
-The first release focuses on:
+The public collection focuses on:
 
 - `clear-technical-writing`: rewrite technical and product writing so it sounds concrete, useful, and close to the work
 - `design-thinking-simulation`: run a customer-centric design-thinking exercise from opportunity framing through value propositions and story
+- `editorial-charting`: specify and prototype editorial charts with a visual contact sheet, color system, and chart-pattern examples
 
 ## Repository Layout
 
@@ -30,8 +31,17 @@ This repo is also structured for GitHub-based skill installers that expect stand
 
 Current public skill slugs:
 
+- `anti-slop-editorial`
 - `clear-technical-writing`
+- `codex-project-planner`
 - `design-thinking-simulation`
+- `economist-chart-editor` (legacy alias for `editorial-charting`)
+- `editorial-charting`
+- `evidence-synthesis`
+- `instant-influence`
+- `prompt-hardening`
+- `python-env-bootstrap`
+- `repo-onboarding`
 
 ## Skill Notes
 
@@ -42,6 +52,12 @@ Derived from an internal anti-slop editorial draft and refined into a public-saf
 ### `design-thinking-simulation`
 
 Derived from a design-thinking simulation brief and packaged as a reusable facilitation skill. It produces structured customer scenarios, empathy maps, insight clusters, HMW prompts, value propositions, and a customer story.
+
+### `editorial-charting`
+
+Refreshed from the legacy chart editor into a modular editorial charting skill. It includes a Bloomberg-inspired color system, chart-pattern references, Python examples, and a printable contact sheet.
+
+![Editorial Charting contact sheet preview](skills/editorial-charting/assets/contact-sheet-preview.png)
 
 ## Publishing Notes
 

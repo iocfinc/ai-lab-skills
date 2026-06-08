@@ -9,7 +9,7 @@ Use the contact sheet when a human or agent needs a quick visual inventory of wh
 Open:
 
 ```text
-SKILLS/editorial-charting/assets/contact-sheet.html
+skills/editorial-charting/assets/contact-sheet.html
 ```
 
 The HTML is standalone and includes print CSS. To make a PDF, open it in a browser and print to PDF.
@@ -17,7 +17,7 @@ The HTML is standalone and includes print CSS. To make a PDF, open it in a brows
 For repository browsing or pull-request review, use:
 
 ```text
-SKILLS/editorial-charting/assets/contact-sheet-preview.png
+skills/editorial-charting/assets/contact-sheet-preview.png
 ```
 
 Code hosts usually render PNG files inline. The PNG is a preview companion, not the source of truth.
