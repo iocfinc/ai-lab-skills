@@ -1,6 +1,6 @@
 ---
 name: economist-chart-editor
-description: Legacy alias for editorial-charting. Use when an existing workflow invokes the old Economist chart editor name; prefer SKILLS/editorial-charting for current charting guidance.
+description: Legacy alias for editorial-charting. Use when an existing workflow invokes the old Economist chart editor name; prefer skills/editorial-charting for current charting guidance.
 ---
 
 # Economist Chart Editor Legacy Alias
@@ -15,13 +15,13 @@ The old skill was inspired by editorial chart discipline. The current version av
 
 Load:
 
-- `SKILLS/editorial-charting/SKILL.md`
-- `SKILLS/editorial-charting/assets/contact-sheet.html`
-- `SKILLS/editorial-charting/references/contact-sheet-setup.md`
-- `SKILLS/editorial-charting/references/color-system.yaml`
-- `SKILLS/editorial-charting/references/chart-patterns.yaml`
-- `SKILLS/editorial-charting/scripts/sample_basic_chart.py`
-- `SKILLS/editorial-charting/scripts/sample_emphasis_chart.py`
+- `skills/editorial-charting/SKILL.md`
+- `skills/editorial-charting/assets/contact-sheet.html`
+- `skills/editorial-charting/references/contact-sheet-setup.md`
+- `skills/editorial-charting/references/color-system.yaml`
+- `skills/editorial-charting/references/chart-patterns.yaml`
+- `skills/editorial-charting/scripts/sample_basic_chart.py`
+- `skills/editorial-charting/scripts/sample_emphasis_chart.py`
 
 ## Minimal Fallback Workflow
 

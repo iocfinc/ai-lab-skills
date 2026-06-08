@@ -15,7 +15,7 @@ Keep these boundaries strict:
 Each public skill should live at:
 
 ```text
-SKILLS/<skill-name>/SKILL.md
+skills/<skill-name>/SKILL.md
 ```
 
 Optional supporting files are allowed only when the public skill needs them:
@@ -55,7 +55,7 @@ $XDG_DATA_HOME/dioscuri/ai-lab-skills
 
 1. Author or refine the canonical skill in `CodexSkills`.
 2. Strip internal-only references, harness notes, and reusable private tooling.
-3. Export the public copy into this repo's `SKILLS/` tree.
+3. Export the public copy into this repo's `skills/` tree.
 4. Validate:
    - every published skill has a `SKILL.md`
    - frontmatter is present and trigger-focused
@@ -65,13 +65,15 @@ $XDG_DATA_HOME/dioscuri/ai-lab-skills
 ## Current Public Inventory
 
 - `anti-slop-editorial`
-- `instant-influence`
-- `editorial-charting`
-- `economist-chart-editor`
-- `repo-onboarding`
-- `prompt-hardening`
-- `evidence-synthesis`
-- `python-env-bootstrap`
+- `clear-technical-writing`
 - `codex-project-planner`
+- `design-thinking-simulation`
+- `economist-chart-editor`
+- `editorial-charting`
+- `evidence-synthesis`
+- `instant-influence`
+- `prompt-hardening`
+- `python-env-bootstrap`
+- `repo-onboarding`
 
 `economist-chart-editor` is a legacy alias. New charting work should target `editorial-charting`.
