@@ -1,7 +1,7 @@
 {
   "name": "codex-ai-lab-skills",
   "version": "0.1.0",
-  "description": "Reusable public-facing agent skills for technical writing, product framing, charting, and practical developer workflows.",
+  "description": "Reusable public-facing agent skills for technical writing, product framing, charting, and agentic development lifecycle workflows.",
   "author": {
     "name": "Ira Oliver Fernando",
     "url": "https://github.com/iocfinc"
@@ -16,13 +16,17 @@
     "writing",
     "design-thinking",
     "data-visualization",
-    "developer-workflow"
+    "developer-workflow",
+    "adlc",
+    "agentic-development-lifecycle",
+    "sprint-lead",
+    "subagents"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "AI Lab Skills",
-    "shortDescription": "Public agent skills for writing, charting, product framing, and developer workflows.",
-    "longDescription": "A public AI Lab collection of reusable agent skills for clear technical writing, editorial charting, customer-centric product discovery, evidence synthesis, and practical developer workflows.",
+    "shortDescription": "Public agent skills for writing, charting, product framing, and ADLC workflows.",
+    "longDescription": "A public AI Lab collection of reusable agent skills for clear technical writing, editorial charting, customer-centric product discovery, evidence synthesis, and agentic development lifecycle workflows from planning through verification and trace-to-eval improvement.",
     "developerName": "Ira Oliver Fernando",
     "category": "Productivity",
     "capabilities": [
@@ -34,7 +38,9 @@
     "defaultPrompt": [
       "Rewrite this technical note so it sounds concrete and useful.",
       "Run a design-thinking simulation for this product idea.",
-      "Create an editorial chart brief and contact-sheet-backed implementation plan."
+      "Create an editorial chart brief and contact-sheet-backed implementation plan.",
+      "Act as the sprint lead for this goal and coordinate scoped sub-agent work.",
+      "Turn this task into success criteria, a TDD loop, verification evidence, and a trace-to-eval follow-up."
     ],
     "brandColor": "#0F766E"
   }
