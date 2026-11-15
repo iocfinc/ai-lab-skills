@@ -10,6 +10,15 @@ Keep these boundaries strict:
 - reusable export logic lives in `CodexSkills`
 - this repo receives curated public outputs only
 
+## Plugin Family Direction
+
+The public AI Lab surface should split into two lines over time:
+
+- visualization skills: charting, scrollytelling, visual review, and image or style systems
+- ADLC skills: planning, sprint leadership, criteria, task decomposition, TDD, verification, dispatch, communication, and trace-to-eval improvement
+
+Reusable harness core stays in `CodexSkills`: agents, hooks, templates, eval runners, private automations, and workspace-specific operating context.
+
 ## What Gets Published
 
 Each public skill should live at:
@@ -65,6 +74,9 @@ $XDG_DATA_HOME/dioscuri/ai-lab-skills
 ## Current Public Inventory
 
 - `anti-slop-editorial`
+- `agent-backlog-dispatch`
+- `agent-sprint-lead`
+- `agent-tdd-loop`
 - `clear-technical-writing`
 - `codex-project-planner`
 - `design-thinking-simulation`
@@ -72,8 +84,14 @@ $XDG_DATA_HOME/dioscuri/ai-lab-skills
 - `editorial-charting`
 - `evidence-synthesis`
 - `instant-influence`
+- `implementation-comms-log`
+- `implementation-verification`
+- `linear-backlog-grooming`
+- `planning-packet-workflow`
 - `prompt-hardening`
 - `python-env-bootstrap`
 - `repo-onboarding`
+- `success-criteria-designer`
+- `trace-to-eval-improvement-loop`
 
 `economist-chart-editor` is a legacy alias. New charting work should target `editorial-charting`.

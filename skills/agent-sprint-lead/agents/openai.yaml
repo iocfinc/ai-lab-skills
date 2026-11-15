@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Sprint Lead"
+  short_description: "Lead agent-led sprint loops"
+  default_prompt: "Use $agent-sprint-lead to turn this goal into an agent-led sprint with scoped delegation and retro capture."
